@@ -38,4 +38,4 @@ class TestSmartRoomOccupancy(unittest.TestCase):
         smart_room = SmartRoom()
         smart_room.check_room_occupancy()
 
-        mock_distance_sensor.assert_called_once_with(smart_room.INFRARED_PIN)
+        mock_distance_sensor.assert_called_once_with(22)
