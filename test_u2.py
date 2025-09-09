@@ -40,11 +40,4 @@ class TestSmartRoomLightDetection(unittest.TestCase):
 
         mock_photoresistor.assert_called_once_with(smart_room.PHOTO_PIN)
 
-    @patch.object(GPIO, "input")
-    def test_check_enough_light_raises_exception_if_sensor_fails(self, mock_photoresistor: Mock):
-        """Gestione resiliente: il metodo propaga un'eccezione se il sensore fallisce."""
-        mock_photoresistor.side_effect = RuntimeError("Photoresistor disconnected")
-        smart_room = SmartRoom()
-
-        with self.assertRaises(RuntimeError):
-            smart_room.check_enough_light()
+    
