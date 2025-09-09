@@ -10,6 +10,9 @@ from src.smart_room import SmartRoom
 
 class TestSmartRoomLightManagement(unittest.TestCase):
 
+
+
+#aggungere 3 test per verificare che venga chiamato il sensore corretto come nei test precedenti
     @patch.object(GPIO, "output")
     @patch.object(SmartRoom, "check_enough_light")
     @patch.object(SmartRoom, "check_room_occupancy")
